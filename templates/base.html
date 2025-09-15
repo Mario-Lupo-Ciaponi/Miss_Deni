@@ -8,6 +8,31 @@
   <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        {# TODO: ADD LOGO #}
+        <li>Зa Miss Deni</li>
+        <li>Галерия</li>
+        <li>Видеа</li>
+        <li>Контакти</li>
+        {# This is if the parent hasn't sign in to the site #}
+        <li>Вход</li>
+        {# This is if the parent has signed in to the site #}
+        <li>Родител</li>
+      </ul>
+    </nav>
 
+    <h1>Miss Deni</h1>
+    <p>Unlock Your World with English</p>
+  </header>
+  <main>
+    {% block content %}
+
+    {% endblock %}
+  </main>
+  <footer>
+    &copy; 2025 Miss Deni. All rights reserved.
+  </footer>
 </body>
 </html>
