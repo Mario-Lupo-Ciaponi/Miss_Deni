@@ -1,3 +1,5 @@
+{% load static %}
+
 <!doctype html>
 <html lang="bg">
 <head>
@@ -5,27 +7,14 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{% static 'styles/common/base.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/common/reset.css' %}">
+  <link rel="shortcut icon" href="{% static "images/logo/miss-deni-logo.png" %}" type="image/x-icon">
+  {% block styles %}{% endblock %}
   <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        {# TODO: ADD LOGO #}
-        <li>Зa Miss Deni</li>
-        <li>Галерия</li>
-        <li>Видеа</li>
-        <li>Контакти</li>
-        {# This is if the parent hasn't sign in to the site #}
-        <li>Вход</li>
-        {# This is if the parent has signed in to the site #}
-        <li>Родител</li>
-      </ul>
-    </nav>
-
-    <h1>Miss Deni</h1>
-    <p>Unlock Your World with English</p>
-  </header>
+  {% include "common/header.html" %}
   <main>
     {% block content %}
 

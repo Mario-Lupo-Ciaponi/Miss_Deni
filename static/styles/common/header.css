@@ -1,0 +1,36 @@
+@import "navbar.css";
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+.banner {
+  height: 540px;
+  width: 100%;
+  position: relative;
+}
+
+.banner img {
+  height: 100%;
+  width: 100%;
+}
+
+.text-of-banner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.text-of-banner h1 {
+  font-size: 4rem;
+  border-bottom: 2px solid white;
+  padding: 0 30px;
+}
+
+.text-of-banner p {
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.7rem;
+  text-align: center;
+  margin-top: 5px;
+}
