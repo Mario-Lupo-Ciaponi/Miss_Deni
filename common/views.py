@@ -5,4 +5,4 @@ from django.shortcuts import render
 
 
 def index(request: HttpRequest) -> HTTPResponse:
-    return render(request, "common/../templates/index.html")
+    return render(request, "index.html")

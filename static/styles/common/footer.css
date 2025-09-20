@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+footer {
+  padding: 10px 5px;
+  position: relative;
+  background-color: chocolate;
+  color: white;
+  height: 250px;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+footer div {
+  display: inline-block;
+}
+
+footer .rights-reserved-text {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+footer .rights-reserved-text h2 {
+  font-family: sans-serif;
+  font-size: 2.5rem;
+}
+
+footer .rights-reserved-text p {
+  font-size: 0.8rem;
+  font-family: sans-serif;
+}
+
+footer .links {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer .links ul {
+  list-style-type: none;
+}
+
+footer .links ul li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+
+footer .links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.5s;
+  font-family: "Playpen Sans", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+footer .links a:hover {
+  text-decoration: none;
+  color: #1ABC9C;
+}
+
+footer .social-media-links {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer .social-media-links p {
+  margin-bottom: 5px;
+}
+
+footer .social-media-links a {
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+footer .social-media-links a i {
+  color: white;
+  transition: color 0.5s;
+}
+
+footer .social-media-links a i:hover {
+  color: #1ABC9C;
+}
