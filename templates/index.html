@@ -1,11 +1,22 @@
 {% extends "common/base.html" %}
+{% load static %}
 
 {% block styles %}
-
+  <link rel="stylesheet" href="{% static "styles/common/index.css" %}">
 {% endblock %}
 
 {% block title %}
   Начало
+{% endblock %}
+
+{% block banner %}
+	<div class="banner">
+    <div class="text-of-banner">
+      <h1>Miss Deni</h1>
+      <p>Unlock Your World with English</p>
+    </div>
+    <img src="{% static "images/banner-image.jpg" %}" alt="">
+  </div>
 {% endblock %}
 
 {% block content %}

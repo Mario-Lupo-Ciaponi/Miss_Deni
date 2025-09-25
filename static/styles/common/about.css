@@ -1,0 +1,71 @@
+@import "header.css";
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+h2.about-us-heading {
+  width: 30%;
+  text-align: center;
+  font-size: 2.8rem;
+  margin: 50px auto 40px auto;
+  padding-bottom: 5px;
+  color: #5A3E2B;
+  border-bottom: 3px solid #7A5A44;
+}
+
+section {
+  color: #3B2A1A;
+}
+
+article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0;
+  gap: 3rem;
+}
+
+
+article .info {
+  width: 30%;
+}
+article .image {
+  width: 300px;
+  max-width: 100%;
+  position: relative;
+}
+
+article .horizontal-image {
+  width: 400px;
+}
+
+
+article .image img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+article .image i{
+  position: absolute;
+  left: -20px;
+  top: -25px;
+}
+
+article .info h3 {
+  font-size: 2.2rem;
+}
+
+article .info p {
+  font-size: 1.2rem;
+}
+
+hr {
+  width: 80%;
+  height: 3px;
+  background-color: #1A3B3B;
+  border: none;
+  margin: 3px 0 9px 0;
+}

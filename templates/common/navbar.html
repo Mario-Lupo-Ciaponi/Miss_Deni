@@ -1,8 +1,9 @@
+{% load static %}
+
 <nav>
+  <a href="{% url "index" %}"><img class="logo" src="{% static "images/logo/miss-deni-logo.png" %}" alt="logo"></a>
   <ul>
-    {# TODO: ADD LOGO #}
-    <li><a href="{% url "index" %}">Начало</a></li>
-    <li><a href="#">Зa Miss Deni</a></li>
+    <li><a href="{% url "about" %}">Зa Miss Deni</a></li>
     <li><a href="#">Галерия</a></li>
     <li><a href="#">Видеа</a></li>
     <li><a href="#">Контакти</a></li>

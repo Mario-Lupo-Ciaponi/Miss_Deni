@@ -1,2 +1,6 @@
-@import "header.css";
+@import "navbar.css";
 @import "footer.css";
+
+body {
+  background-color: #FAF5EC;
+}

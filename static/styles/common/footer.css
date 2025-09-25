@@ -2,23 +2,22 @@
 
 footer {
   padding: 10px 5px;
-  position: relative;
   background-color: chocolate;
   color: white;
   height: 250px;
   width: 100%;
   font-size: 1.1rem;
-}
-
-footer div {
-  display: inline-block;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 footer .rights-reserved-text {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translate(0, -50%);
+  /*position: absolute;*/
+  /*left: 20px;*/
+  /*top: 50%;*/
+  /*transform: translate(0, -50%);*/
 }
 
 footer .rights-reserved-text h2 {
@@ -32,14 +31,16 @@ footer .rights-reserved-text p {
 }
 
 footer .links {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
 }
 
 footer .links ul {
+  padding: 0;
   list-style-type: none;
+  text-align: center;
 }
 
 footer .links ul li {
@@ -64,10 +65,10 @@ footer .links a:hover {
 }
 
 footer .social-media-links {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  /*position: absolute;*/
+  /*right: 10px;*/
+  /*top: 50%;*/
+  /*transform: translate(-50%, -50%);*/
 }
 
 footer .social-media-links p {
