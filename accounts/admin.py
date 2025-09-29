@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import MissDeniUser
+
+@admin.register(MissDeniUser)
+class MissDeniUserAdmin(admin.ModelAdmin):
+    pass
+

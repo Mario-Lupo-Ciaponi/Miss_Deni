@@ -1,0 +1,33 @@
+.post {
+  width: 40%;
+  background-color: #E0D8C9;
+  border-radius: 4%;
+}
+
+.post .post-title {
+  font-size: 1.4rem;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  color: #4B3A28;
+}
+
+.post-title,
+.post-info {
+  margin: 1rem 0.7rem;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+}
+
+.post-description {
+  font-size: 1.1rem;
+}
+
+.posted-on {
+  margin-top: 0.8rem;
+  padding-top: 0.3rem;
+  color: #2F3A42;
+  border-top: 1px solid #2F3A42;
+}
