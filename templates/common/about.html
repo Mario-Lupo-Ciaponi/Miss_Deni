@@ -12,10 +12,11 @@
 {% block banner %}
 	<div class="banner">
     <div class="text-of-banner">
-      <h1>За Miss Deni</h1>
-      <p>Learning with heart and a smile – a space where every child grows at their own pace.</p>
+      <h1 class="banner-title">За Miss Deni</h1>
+      <hr class="banner-divider">
+      <p class="banner-quote">Learning with heart and a smile – a space where every child grows at their own pace.</p>
     </div>
-    <img src="{% static "images/banner-image.jpg" %}" alt="miss-deni">
+    <img class="banner-image" src="{% static "images/banner-image.jpg" %}" alt="miss-deni">
   </div>
 {% endblock %}
 
@@ -26,7 +27,7 @@
     <article>
       <div class="info">
         <h3>За мен</h3>
-        <hr>
+        <hr class="article-divider">
         <p>
           Аз съм <strong>Дени</strong> – завърших Софийски университет през 2019 г. със специалност Начална училищна педагогика с
           <strong>английски език</strong>. Първите си стъпки в преподаването направих в образователен център, а след това натрупах
@@ -46,7 +47,7 @@
       </div>
       <div class="info">
         <h3>Цел</h3>
-        <hr>
+        <hr class="article-divider">
         <p>
           През 2023 година реших, че е време да създам свое място – школа без рамки и срокове, където всяко дете може
           да учи със собствено темпо и да се чувства спокойно.
@@ -57,7 +58,7 @@
     <article>
       <div class="info">
         <h3>Подход</h3>
-        <hr>
+        <hr class="article-divider">
         <p>
           Вярвам, че учителят може да бъде и приятел – в часовете играем, разговаряме за важни и интересни теми и винаги
           има място за усмивки. Моята мисия е децата да си тръгват от всеки урок с добро настроение, повече увереност и

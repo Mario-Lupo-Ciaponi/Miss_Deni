@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.banner img {
+.banner .banner-image {
   height: 100%;
   width: 100%;
 }
@@ -17,20 +17,54 @@
   top: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  width: 60%;
 }
 
-.text-of-banner h1 {
+.text-of-banner .banner-title {
   font-size: 4rem;
-  border-bottom: 2px solid white;
   padding: 0 30px;
   font-family: sans-serif;
+  text-align: center;
 }
 
-.text-of-banner p {
+.text-of-banner .banner-divider {
+  width: 95%;
+  color: white;
+  margin: 0 auto;
+}
+
+.text-of-banner .banner-quote {
   font-family: "Tangerine", cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 1.7rem;
   text-align: center;
   margin-top: 5px;
+}
+
+@media screen and (max-width: 640px){
+  .banner .banner-image {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 717px) {
+  .text-of-banner {
+    width: 80%;
+  }
+
+  .text-of-banner .banner-title {
+      font-size: 3.7rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .text-of-banner .banner-title {
+      font-size: 3rem;
+  }
+  .text-of-banner {
+    width: 95%;
+  }
 }

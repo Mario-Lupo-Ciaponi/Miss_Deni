@@ -1,45 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
 
-nav {
-  position: fixed;
+.navbar {
+  position: sticky;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 1000;
+  background-color: chocolate;
+}
+
+.navbar .content {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  background-color: chocolate;
   align-items: center;
-  height: 90px;
+  padding: 0.5rem 1rem;
+  max-width: 93rem;
+  margin: 0 auto;
 }
+
 
 .logo {
   width: 80px;
-  margin-left: 30px;
 }
 
-nav ul {
+.navbar .links {
   padding: 10px 20px 10px 0;
   display: flex;
   justify-content: flex-end;
   gap: 0 1rem;
 }
 
-nav ul li {
+.navbar .links .item {
   list-style-type: none;
 }
 
-nav ul li a {
+.navbar .links .item .link {
   text-decoration: none;
   color: white;
   font-family: "Playpen Sans", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  transition: color 0.5s;
+  transition: color 0.5s ease-in-out;
 }
 
-nav ul li a:hover {
+.navbar .links .item .link:hover {
   color: #1ABC9C;
+}
+
+.navbar .menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 758px){
+  .navbar .menu-button {
+    display: block;
+  }
+
+  .navbar .links {
+    display: none;
+  }
 }

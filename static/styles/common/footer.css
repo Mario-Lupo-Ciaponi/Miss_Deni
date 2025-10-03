@@ -1,55 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
 
-footer {
-  padding: 10px 5px;
+:root {
+  --margin-common-value: 0.3rem;
+}
+
+.footer-content {
+  padding: 2.7rem 0;
   background-color: chocolate;
   color: white;
-  height: 250px;
   width: 100%;
   font-size: 1.1rem;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 
-footer .rights-reserved-text {
-  /*position: absolute;*/
-  /*left: 20px;*/
-  /*top: 50%;*/
-  /*transform: translate(0, -50%);*/
-}
 
-footer .rights-reserved-text h2 {
+.footer-content .rights-reserved-column .footer-author {
   font-family: sans-serif;
   font-size: 2.5rem;
 }
 
-footer .rights-reserved-text p {
+.footer-content .rights-reserved-column .rights-reserved-p {
   font-size: 0.8rem;
   font-family: sans-serif;
 }
 
-footer .links {
-  /*position: absolute;*/
-  /*top: 50%;*/
-  /*left: 50%;*/
-  /*transform: translate(-50%, -50%);*/
-}
 
-footer .links ul {
+.footer-content .links-column .links {
   padding: 0;
   list-style-type: none;
   text-align: center;
 }
 
-footer .links ul li {
+.footer-content .links .links .item {
   list-style-type: none;
-  margin: 10px 0;
+  margin: calc(var(--margin-common-value) * 2) 0;
 }
 
 
-footer .links a {
+.footer-content .links-column .link {
   text-decoration: none;
   color: white;
   transition: color 0.5s;
@@ -59,32 +50,45 @@ footer .links a {
   font-style: normal;
 }
 
-footer .links a:hover {
+.footer-content .links-column .link:hover {
   text-decoration: none;
   color: #1ABC9C;
 }
 
-footer .social-media-links {
-  /*position: absolute;*/
-  /*right: 10px;*/
-  /*top: 50%;*/
-  /*transform: translate(-50%, -50%);*/
+.footer-content .social-media-links .see-also-p {
+  margin-bottom: var(--margin-common-value);
 }
 
-footer .social-media-links p {
-  margin-bottom: 5px;
-}
-
-footer .social-media-links a {
+.footer-content .social-media-links .social-link {
   text-decoration: none;
-  margin-right: 5px;
+  margin-right: var(--margin-common-value);
 }
 
-footer .social-media-links a i {
+.footer-content .social-media-links .social-link .icon {
   color: white;
   transition: color 0.5s;
 }
 
-footer .social-media-links a i:hover {
+.footer-content .social-media-links .social-link .icon:hover {
   color: #1ABC9C;
+}
+
+.footer-content .footer-divider {
+  display: none;
+}
+
+@media screen and (max-width: 513px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .footer-content .footer-divider {
+    display: block;
+    width: 50%;
+  }
+
 }

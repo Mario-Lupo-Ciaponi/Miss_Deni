@@ -20,7 +20,6 @@ body {
   line-height: 1.5;
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
-  padding-top: 90px;
 }
 
 /* 6. Improve media defaults */
