@@ -1,0 +1,85 @@
+{% extends "common/base.html" %}
+
+{% load static %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static "styles/common/contact.css" %}">
+{% endblock %}
+
+{% block title %}
+  Контакти
+{% endblock %}
+
+
+{% block content %}
+  <div class="center-container">
+    <section class="contact-section">
+      <div class="contact-info">
+        <div class="contact-header">
+          <h1 class="contact-heading">Информация за свързване</h1>
+          <p class="contact-subheading">Say something to start a live chat!</p>
+        </div>
+
+        <div class="meta-info">
+          <p class="phone-number meta-item"><i class="fas fa-phone contact-icon"></i> +359 87 8488809</p>
+          <p class="email meta-item"><i class="fas fa-envelope contact-icon"></i> john.doe@gmail.com</p>
+          <p class="address meta-item"><i class="fas fa-map-marker-alt contact-icon"></i> Фредерик Жюльо Кюри, 9A</p>
+        </div>
+
+        <div class="social-media-icons">
+          <a href="#" class="social-media-icon"><i class="fab fa-facebook-f icon"></i></a>
+          <a href="#" class="social-media-icon"><i class="fab fa-instagram icon"></i></a>
+          <a href="#" class="social-media-icon"><i class="fab fa-youtube icon"></i></a>
+        </div>
+      </div>
+
+      <form method="post" class="contact-form" >
+        {% csrf_token %}
+
+        <!-- Personal info fields -->
+        <div class="personal-info">
+          <div class="form-field">
+            {{ form.first_name.label_tag }}
+            {{ form.first_name }}
+          </div>
+
+          <div class="form-field">
+            {{ form.last_name.label_tag }}
+            {{ form.last_name }}
+          </div>
+
+          <div class="form-field">
+            {{ form.email.label_tag }}
+            {{ form.email }}
+          </div>
+
+          <div class="form-field">
+            {{ form.phone_number.label_tag }}
+            {{ form.phone_number }}
+          </div>
+        </div>
+
+        <div class="form-field reason-field">
+          {{ form.select_subject.label_tag }}
+          <div class="radio-group">
+            {% for radio in form.select_subject %}
+              <label class="radio-option">
+                {{ radio.tag }}
+                {{ radio.choice_label }}
+              </label>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="form-field">
+          {{ form.message.label_tag }}
+          {{ form.message }}
+        </div>
+
+        <button class="btn" type="submit">Изпрати съобщение</button>
+      </form>
+
+    </section>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,125 @@
+:root {
+  --color-form-and-btn: #E0D8C9;
+  --bg-contact-info: #2E2E2E;
+  --primary-text-color: #F5F5F5;
+  --secondary-text-color: #BDBDBD;
+  --bg-color-social-media-icon: #3A3A3A;
+  --input-color: #7c6f63;
+}
+
+.center-container {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem 0;
+}
+
+.contact-section {
+  display: flex;
+  gap: 2rem;
+  width: 90%;
+  background-color: var(--color-form-and-btn);
+  padding: 0.5rem;
+  min-height: 400px;
+
+}
+
+.contact-section .contact-info {
+  background-color: var(--bg-contact-info);
+  color: var(--primary-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem;
+  flex: 0 0 35%;
+}
+
+
+.contact-section,
+.contact-section .contact-info,
+.contact-section .contact-form .btn {
+  border-radius: 6px;
+}
+
+.contact-section .contact-info .contact-heading{
+  font-size: 1.75rem;
+}
+
+.contact-section .contact-info .contact-subheading{
+  color: var(--secondary-text-color);
+}
+
+.contact-section .meta-info{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-section .meta-info .contact-icon{
+  margin-right: 6px;
+}
+
+.contact-section .social-media-icons .social-media-icon{
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  background-color: var(--bg-color-social-media-icon);
+  color: var(--primary-text-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  transition: all 0.7s ease-in-out;
+}
+
+.contact-section .social-media-icons .social-media-icon:hover{
+  background-color: var(--primary-text-color);
+  color: var(--bg-color-social-media-icon);
+}
+
+.contact-section .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+  padding: 1rem;
+  color: var(--input-color);
+}
+
+.contact-section .contact-form  .form-field label {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.contact-section .contact-form  .form-field > input {
+  width: 100%;
+  display: block;
+  outline: none;
+  background: none;
+  border: none;
+  color: var(--input-color);
+  border-bottom: 1px solid var(--input-color);
+}
+
+.contact-section .contact-form .personal-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+
+.contact-section .contact-form .personal-info .form-field {
+  flex: 1 1 40%;
+}
+
+.contact-section .contact-form .btn {
+  align-self: flex-end;
+  background-color: #4f433c;
+  color: var(--color-form-and-btn);
+  border: none;
+  padding: 0.8rem 0;
+  width: 12rem;
+  cursor: pointer;
+}

@@ -1,6 +1,6 @@
 @import "post-card.css";
 
-h1 {
+.posts-heading {
   margin: 1rem auto;
   text-align: center;
   font-size: 3.3rem;
@@ -15,4 +15,11 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+}
+
+
+@media screen and (max-width: 407px) {
+  .posts-heading {
+    width: 65%;
+  }
 }

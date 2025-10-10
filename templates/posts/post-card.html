@@ -1,6 +1,6 @@
 <article class="post">
   <h2 class="post-title">{{ post.title }}</h2>
-  <img src="{{ post.file.url }}" alt="{{ post.title }}">
+  <img class="post-image" src="{{ post.file.url }}" alt="{{ post.title }}">
   <div class="post-info">
     <p class="post-description">{{ post.description }}</p>
     <p class="posted-on">Публикувано на {{ post.posted_on|date:"Y:m:d, G:i" }}</p>

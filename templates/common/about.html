@@ -21,53 +21,53 @@
 {% endblock %}
 
 {% block content %}
-  <section>
+  <section class="about-section">
     <h2 class="about-us-heading">Learn, Laugh, Grow</h2>
   
-    <article>
+    <article class="about-item">
       <div class="info">
-        <h3>За мен</h3>
+        <h3 class="about-header">За мен</h3>
         <hr class="article-divider">
-        <p>
+        <p class="about-description">
           Аз съм <strong>Дени</strong> – завърших Софийски университет през 2019 г. със специалност Начална училищна педагогика с
           <strong>английски език</strong>. Първите си стъпки в преподаването направих в образователен център, а след това натрупах
           опит и в частно, и в държавно училище.
         </p>
       </div>
       <div class="image">
-        <img src="{% static "images/miss-deni-personal-photo.jpg" %}" alt="">
-        <i class="fas fa-school fa-3x"></i>
+        <img class="about-image" src="{% static "images/miss-deni-personal-photo.jpg" %}" alt="">
+        <i class="fas fa-school fa-3x icon"></i>
       </div>
     </article>
 
-    <article>
-      <div class="image">
-        <img src="{% static "images/miss-deni-opening.jpg" %}" alt="">
-        <i class="fas fa-chalkboard-teacher fa-3x"></i>
-      </div>
+    <article class="about-item">
       <div class="info">
-        <h3>Цел</h3>
+        <h3 class="about-header">Цел</h3>
         <hr class="article-divider">
-        <p>
+        <p class="about-description">
           През 2023 година реших, че е време да създам свое място – школа без рамки и срокове, където всяко дете може
           да учи със собствено темпо и да се чувства спокойно.
         </p>
       </div>
+      <div class="image">
+        <img class="about-image" src="{% static "images/miss-deni-opening.jpg" %}" alt="">
+        <i class="fas fa-chalkboard-teacher fa-3x icon"></i>
+      </div>
     </article>
 
-    <article>
+    <article class="about-item">
       <div class="info">
-        <h3>Подход</h3>
+        <h3 class="about-header">Подход</h3>
         <hr class="article-divider">
-        <p>
+        <p class="about-description">
           Вярвам, че учителят може да бъде и приятел – в часовете играем, разговаряме за важни и интересни теми и винаги
           има място за усмивки. Моята мисия е децата да си тръгват от всеки урок с добро настроение, повече увереност и
           усещане, че са разбрани и ценени.
         </p>
       </div>
       <div class="image horizontal-image">
-        <img src="{% static "images/miss-deni-approach.jpg" %}" alt="">
-        <i class="fas fa-gamepad fa-3x"></i>
+        <img class="about-image" src="{% static "images/miss-deni-approach.jpg" %}" alt="">
+        <i class="fas fa-gamepad fa-3x icon"></i>
       </div>
     </article>
   </section>

@@ -1,3 +1,7 @@
+:root {
+  --dark-post-color: #2F3A42;
+}
+
 .post {
   width: 40%;
   background-color: #E0D8C9;
@@ -16,7 +20,7 @@
   margin: 1rem 0.7rem;
 }
 
-.post img {
+.post .post-image {
   width: 100%;
   height: auto;
 }
@@ -28,6 +32,24 @@
 .posted-on {
   margin-top: 0.8rem;
   padding-top: 0.3rem;
-  color: #2F3A42;
-  border-top: 1px solid #2F3A42;
+  color: var(--dark-post-color);
+  border-top: 1px solid var(--dark-post-color);
+}
+
+@media screen and (max-width: 768px) {
+  .post {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 419px) {
+  .post {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .post {
+    width: 90%;
+  }
 }

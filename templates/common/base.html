@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="{% static 'styles/common/base.css' %}">
   <link rel="stylesheet" href="{% static 'styles/common/reset.css' %}">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
-  <link rel="shortcut icon" href="{% static "images/logo/miss-deni-logo.png" %}" type="image/x-icon">
+  <link rel="shortcut icon" href="{% static "images/logo/logo.png" %}" type="image/x-icon">
   {% block styles %}{% endblock %}
   <title>{% block title %}{% endblock %}</title>
 </head>
@@ -21,9 +21,6 @@
 
     {% endblock %}
 
-    {% block heading %}
-      {{ title|capfirst }}
-    {% endblock %}
   </header>
 
 

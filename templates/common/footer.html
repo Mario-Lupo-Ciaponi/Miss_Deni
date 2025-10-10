@@ -7,13 +7,18 @@
   <hr class="footer-divider">
 
   <div class="links-column footer-item">
-    <ul class="links">
-      <li class="item"><a class="link" href="">Начало</a></li>
-      <li class="item"><a class="link" href="">За Miss Deni</a></li>
-      <li class="item"><a class="link" href="">Галерия</a></li>
-      <li class="item"><a class="link" href="">Видеа</a></li>
-      <li class="item"><a class="link" href="">Контакти</a></li>
-    </ul>
+    <div class="links">
+      <div class="column">
+        <p class="item"><a class="link" href="{% url "index" %}">Начало</a></p>
+        <p class="item"><a class="link" href="{% url "about" %}">За Miss Deni</a></p>
+        <p class="item"><a class="link" href="{% url "news" %}">Новини</a></p>
+      </div>
+      <div class="column">
+        <p class="item"><a class="link" href="#">Галерия</a></p>
+        <p class="item"><a class="link" href="#">Видеа</a></p>
+        <p class="item"><a class="link" href="{% url "contact" %}">Контакти</a></p>
+      </div>
+    </div>
   </div>
 
   <hr class="footer-divider">
@@ -23,7 +28,7 @@
     <a class="social-link" href="https://www.instagram.com/ms.stefd/" target="_blank">
       <i class="fab fa-instagram fa-lg icon"></i>
     </a>
-    <a class="social-link" href="#" target="_blank">
+    <a class="social-link" href="https://www.facebook.com/profile.php?id=100085079975834&locale=it_IT" target="_blank">
       <i class="fab fa-facebook fa-lg icon"></i>
     </a>
   </div>

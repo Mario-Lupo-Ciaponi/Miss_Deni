@@ -2,7 +2,7 @@
 
 <nav class="navbar">
   <div class="content">
-    <a class="item logo" href="{% url "index" %}"><img class="logo" src="{% static "images/logo/miss-deni-logo.png" %}" alt="logo"></a>
+    <a class="item logo" href="{% url "index" %}"><img class="logo" src="{% static "images/logo/logo.png" %}" alt="logo"></a>
 
     <button class="menu-button">
       <i class="fas fa-bars icon"></i>
@@ -13,7 +13,7 @@
       <li class="item"><a class="link" href="{% url "news" %}">Новини</a></li>
       <li class="item"><a class="link" href="#">Галерия</a></li>
       <li class="item"><a class="link" href="#">Видеа</a></li>
-      <li class="item"><a class="link" href="#">Контакти</a></li>
+      <li class="item"><a class="link" href="{% url "contact" %}">Контакти</a></li>
       {# This is if the parent hasn't sign in to the site #}
       <li class="item"><a class="link" href="#">Вход</a></li>
       {# This is if the parent has signed in to the site #}

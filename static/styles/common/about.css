@@ -5,8 +5,8 @@ body {
   font-weight: lighter;
 }
 
-h2.about-us-heading {
-  width: 90%;
+.about-us-heading {
+  width: 50%;
   text-align: center;
   font-size: 2.8rem;
   margin: 50px auto 40px auto;
@@ -15,50 +15,56 @@ h2.about-us-heading {
   border-bottom: 3px solid #7A5A44;
 }
 
-section {
+.about-section {
   color: #3B2A1A;
 }
 
-article {
+.about-item {
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 100px 0;
+  margin: 100px auto;
   gap: 3rem;
 }
 
 
-article .info {
+.about-item .info {
   width: 30%;
 }
-article .image {
+
+.about-item .image {
   width: 300px;
   max-width: 100%;
   position: relative;
 }
 
-article .horizontal-image {
+.about-item:nth-of-type(2) .image {
+  order: -1;
+}
+
+.about-item .horizontal-image {
   width: 400px;
 }
 
 
-article .image img{
+.about-item .image .about-image{
   width: 100%;
   height: auto;
   display: block;
 }
 
-article .image i{
+.about-item .image .icon{
   position: absolute;
   left: -20px;
   top: -25px;
 }
 
-article .info h3 {
+.about-item .info .about-header {
   font-size: 2.2rem;
 }
 
-article .info p {
+.about-item .info .about-description {
   font-size: 1.2rem;
 }
 
@@ -70,4 +76,31 @@ article .info p {
   margin: 3px 0 9px 0;
 }
 
+@media screen and (max-width: 841px) {
+  .about-us-heading {
+    width: 70%;
+  }
+}
 
+@media screen and (max-width: 695px) {
+  .about-item {
+    flex-direction: column;
+  }
+
+  .about-item .image,
+  .about-item:nth-of-type(2) .image{
+    order: 1;
+  }
+
+  .about-item .info {
+    font-size: 1.2rem;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 583px){
+  .about-us-heading {
+    width: 90%;
+  }
+}
