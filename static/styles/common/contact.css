@@ -114,12 +114,17 @@
   flex: 1 1 40%;
 }
 
+.contact-section .contact-form .radio-group .radio-option {
+  font-size: 0.72rem;
+}
+
+
 .contact-section .contact-form .btn {
   align-self: flex-end;
   background-color: #4f433c;
   color: var(--color-form-and-btn);
   border: none;
   padding: 0.8rem 0;
-  width: 12rem;
+  width: 13rem;
   cursor: pointer;
 }
