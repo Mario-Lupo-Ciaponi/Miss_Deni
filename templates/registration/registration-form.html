@@ -19,12 +19,16 @@
         {% csrf_token %}
 
         {% for field in form %}
-          {{ field.label_tag }}
-          {{ field }}
+          <div class="form-field">
+            {{ field.label_tag }}
+            {{ field }}
+          </div>
         {% endfor %}
 
-        <button>Регистрирай се</button>
+        <button class="submit-btn">Регистрирай се</button>
       </form>
+
+      <p class="link-p">Имате профил? <a href="{% url "login" %}" class="link">Влезнете</a></p>
     </article>
     <div class="image-container">
       <img class="image" src="{% static "images/miss.jpg" %}" alt="Снимка на мис Дени">
