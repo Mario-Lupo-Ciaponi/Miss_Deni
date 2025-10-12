@@ -1,6 +1,5 @@
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm
-
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 UserModel = get_user_model()
 
@@ -25,17 +24,33 @@ class UserRegistrationForm(UserCreationForm):
         self.fields["password2"].label = "Потвърждаване на парола"
 
         self.fields["username"].widget.attrs.update({
-            "placeholder": "Напишете потрбителско Ви име"
+            "placeholder": "Въведете потрбителско име"
         })
 
         self.fields["email"].widget.attrs.update({
-            "placeholder": "Нашете имейл адреса Ви"
+            "placeholder": "Въведете имейл адреса Ви"
         })
 
         self.fields["password1"].widget.attrs.update({
-            "placeholder": "Напишете парола"
+            "placeholder": "Въведете парола"
         })
 
         self.fields["password2"].widget.attrs.update({
-            "placeholder": "Напишете отново паролата"
+            "placeholder": "Въведете отново паролата"
+        })
+
+
+class CustomLoginForm(AuthenticationForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields["username"].label = "Потребителско име"
+        self.fields["password"].label = "Парола"
+
+        self.fields["username"].widget.attrs.update({
+            "placeholder": "Въведете потрбителско име"
+        })
+
+        self.fields["password"].widget.attrs.update({
+            "placeholder": "Въведете парола"
         })

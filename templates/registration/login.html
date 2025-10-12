@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block styles %}
+  <link rel="stylesheet" href="{% static "styles/registration/form.css" %}">
 {% endblock %}
 
 {% block title %}
@@ -10,22 +11,27 @@
 {% endblock %}
 
 {% block content %}
-  <h1>Login!</h1>
+  <section class="form-section">
+    <article class="article-form">
 
-  <form method="post">
-    {% csrf_token %}
-  
-    {% if form.non_field_errors %}
-    	<div class="error-messages">
-        {{ form.non_field_errors }}
-      </div>
-    {% endif %} 
-  
-    {% for field in form %}
-    	{{ field.label_tag }}
-      {{ field }}
-    {% endfor %}
-    <button>Login</button>
-    <p class="form-footer">Don't have an account? <a href="{% url "register" %}">Register!</a></p>
-  </form>
+      <h1 class="form-title">Добре дошли отново!</h1>
+      <form class="form" method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+          <div class="form-field">
+            {{ field.label_tag }}
+            {{ field }}
+          </div>
+        {% endfor %}
+
+        <button class="submit-btn">Влезни</button>
+      </form>
+
+      <p class="link-p">Нямате все още профил? <a href="{% url "login" %}" class="link">Регистрирайте се</a></p>
+    </article>
+    <div class="image-container">
+      <img class="image" src="{% static "images/miss.jpg" %}" alt="Снимка на мис Дени">
+    </div>
+  </section>
 {% endblock %}

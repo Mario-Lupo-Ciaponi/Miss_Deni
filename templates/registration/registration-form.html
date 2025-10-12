@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block styles %}
-  <link rel="stylesheet" href="{% static "styles/registration/register-form.css" %}">
+  <link rel="stylesheet" href="{% static "styles/registration/form.css" %}">
 {% endblock %}
 
 {% block title %}
@@ -11,11 +11,11 @@
 {% endblock %}
 
 {% block content %}
-  <section class="register-section">
-    <article class="form">
+  <section class="form-section">
+    <article class="article-form">
 
-      <h1 class="register-title">Get Started Now</h1>
-      <form class="register-form" method="post">
+      <h1 class="form-title">Get Started Now</h1>
+      <form class="form" method="post">
         {% csrf_token %}
 
         {% for field in form %}
