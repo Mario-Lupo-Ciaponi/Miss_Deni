@@ -1,0 +1,38 @@
+{% extends "common/base.html" %}
+
+{% load static %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static "styles/posts/form.css" %}" class="css">
+{% endblock %}
+
+{% block title %}
+	Създай публикация
+{% endblock %}
+
+
+{% block content %}
+  <section class="form-section">
+
+    <div class="form-container">
+      <h1 class="form-title">Създай Публикация</h1>
+      <form class="form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        {% for field in form %}
+          <div class="form-field">
+            {{ field.label_tag }}
+            {{ field }}
+          </div>
+        {% endfor %}
+
+        <div class="buttons">
+          <button type="reset" class="btn clear">Изтрий</button>
+          <button type="submit" class="btn submit">Публикувай</button>
+        </div>
+
+      </form>
+    </div>
+
+  </section>
+{% endblock %}

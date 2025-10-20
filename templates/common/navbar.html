@@ -14,11 +14,33 @@
       <li class="item"><a class="link" href="#">Галерия</a></li>
       <li class="item"><a class="link" href="#">Видеа</a></li>
       <li class="item"><a class="link" href="{% url "contact" %}">Контакти</a></li>
-      {# This is if the parent hasn't sign in to the site #}
-      <li class="item"><a class="link" href="{% url "login" %}">Вход</a></li>
-      {# This is if the parent has signed in to the site #}
-      <li class="item"><a class="link" href="#">Родител</a></li>
+      {% if request.user.is_authenticated %}
+        {% if request.user.is_superuser %}
+          <li class="item">
+            <a class="link" href="#">Учител</a>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="{% url "add-post" %}" class="dropdown-link">Нова Публикация</a></li>
+              <li class="dropdown-item"><a href="" class="dropdown-link">Потърси родител</a></li>
+            </ul>
+          </li>
+        {% else %}
+          <li class="item"><a class="link" href="#">Родител</a></li>
+        {% endif %}
+        <li class="item"><a
+                href="{% url "logout" %}"
+                class="link"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            Излез
+                 </a>
+        </li>
+      {% else %}
+        <li class="item"><a class="link" href="{% url "login" %}">Вход</a></li>
+      {% endif %}
     </ul>
   </div>
 
 </nav>
+
+<form id="logout-form" method="post" action="{% url "logout" %}">
+  {% csrf_token %}
+</form>
