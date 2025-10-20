@@ -30,3 +30,7 @@ class BasePostModelForm(forms.ModelForm):
 
 class AddPostModelForm(BasePostModelForm):
     ...
+
+class EditPostModelForm(BasePostModelForm):
+    class Meta(BasePostModelForm.Meta):
+        exclude = ["file", "type_of_post",]

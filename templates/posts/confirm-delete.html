@@ -1,0 +1,30 @@
+{% extends "common/base.html" %}
+
+{% load static %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static "styles/posts/confirm-form.css" %}" class="css">
+{% endblock %}
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+
+{% block content %}
+  <section class="confirm-section">
+    <div class="confirm-delete-div">
+      <h2 class="title">
+        Наистина ли искаш да изстриеш публикацията?
+      </h2>
+      <p class="subtitle">Ще се изтрие завинаги!</p>
+
+      <form class="confirm-form" method="post">
+        {% csrf_token %}
+        <button class="btn reject">Откажи</button>
+        <button class="btn submit">Изтрий</button>
+      </form>
+    </div>
+  </section>
+
+{% endblock %}

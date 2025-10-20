@@ -1,4 +1,10 @@
 <article class="post">
+  {% if request.user.is_superuser %}
+  	<div class="change-options">
+      <a class="change-btn edit" href="{% url "edit-post" post.pk %}"><i class="fas fa-pencil-alt icon"></i></a>
+      <a class="change-btn delete" href="{% url "delete-post" post.pk %}"><i class="fas fa-trash-alt icon"></i></a>
+    </div>
+  {% endif %}
   <h2 class="post-title">{{ post.title }}</h2>
   <img class="post-image" src="{{ post.file.url }}" alt="{{ post.title }}">
   <div class="post-info">

@@ -1,22 +1,25 @@
 :root {
   --dark-post-color: #2F3A42;
+  --dark-brown-color: #4B3A28;
+  --light-brown-color: #af825e;
 }
 
 .post {
   width: 40%;
   background-color: #E0D8C9;
   border-radius: 4%;
+  position: relative;
 }
 
 .post .post-title {
   font-size: 1.4rem;
   text-align: center;
   font-family: Helvetica, sans-serif;
-  color: #4B3A28;
+  color: var(--dark-brown-color);
 }
 
-.post-title,
-.post-info {
+.post, .post-title,
+.post, .post-info {
   margin: 1rem 0.7rem;
 }
 
@@ -25,15 +28,36 @@
   height: auto;
 }
 
-.post-description {
+.post, .post-description {
   font-size: 1.1rem;
 }
 
-.posted-on {
+.post, .posted-on {
   margin-top: 0.8rem;
   padding-top: 0.3rem;
   color: var(--dark-post-color);
   border-top: 1px solid var(--dark-post-color);
+}
+
+.post .change-options {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+}
+
+.post .change-options .change-btn {
+  margin-right: 0.5rem;
+}
+
+.post .change-options .change-btn .icon {
+  font-size: 1.25rem;
+  color: var(--dark-brown-color);
+  transition: all 0.4s ease-in-out;
+}
+
+.post .change-options .change-btn .icon:hover {
+  transform: scale(1.5);
+  color: var(--light-brown-color);
 }
 
 @media screen and (max-width: 768px) {

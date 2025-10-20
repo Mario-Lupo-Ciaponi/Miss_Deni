@@ -1,0 +1,68 @@
+:root {
+  --beige-color: #e1d8ca;
+  --dark-brown-color: #5A3E2B;;
+  --brown-color: #7c6f63;
+  --darker-brown-color: #4f433c;
+}
+
+.confirm-section {
+  display: flex;
+  justify-content: center;
+}
+
+.confirm-delete-div {
+  margin: 7rem;
+  padding: 4rem;
+  border-radius: 1rem;
+  background-color: var(--beige-color);
+  width: 75%;
+}
+
+.confirm-delete-div .title{
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  color: var(--dark-brown-color);
+}
+
+.confirm-delete-div .subtitle{
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--darker-brown-color);
+}
+
+.confirm-delete-div .confirm-form{
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.confirm-delete-div .confirm-form .btn{
+  padding: 0.9rem 1.25rem;
+  border-radius: 0.9rem;
+  border: 1px solid var(--dark-brown-color);
+  cursor: pointer;
+}
+
+.confirm-delete-div .confirm-form .btn.reject{
+  color: var(--dark-brown-color);
+  background-color: transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+.confirm-delete-div .confirm-form .btn.reject:hover{
+  color: var(--beige-color);
+  background-color: var(--dark-brown-color);
+}
+
+.confirm-delete-div .confirm-form .btn.submit{
+  color: var(--beige-color);
+  background-color: var(--dark-brown-color);
+  transition: all 0.4s ease-in-out;
+}
+
+.confirm-delete-div .confirm-form .btn.submit:hover{
+  color: var(--dark-brown-color);
+  background-color: transparent;
+}
