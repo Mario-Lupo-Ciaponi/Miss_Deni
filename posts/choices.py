@@ -1,6 +1,6 @@
 from django.db import models
 
 class PostTypeChoices(models.TextChoices):
-    NEWS = "N", "News"
-    PHOTO = "P", "Photo"
-    VIDEO = "V", "Video"
+    NEWS = "N", "Новини"
+    PHOTO = "P", "Снимка"
+    NORMAL_POST = "V", "Нормална публиация"

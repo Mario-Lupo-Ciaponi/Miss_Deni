@@ -1,0 +1,25 @@
+{% load static %}
+
+<article class="parent-card">
+  <img src="{% static "images/default-profile-image.jpg" %}" alt="профилна снимка" class="profile-image">
+
+  <div class="content">
+    <h2 class="username">{{ parent.username }}</h2>
+
+    <div class="info-and-open-link">
+      <div class="info">
+        <p class="info-item count-of-children">
+          <i class="fas fa-child icon"></i>
+          <span class="count">3</span>
+        </p>
+
+        <p class="info-item count-of-children">
+          <i class="fas fa-calendar-alt icon"></i>
+          <span class="count">9</span>
+        </p>
+      </div>
+
+      <a href="#" class="open-account-link">Отвори</a>
+    </div>
+  </div>
+</article>

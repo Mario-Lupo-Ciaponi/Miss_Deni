@@ -1,0 +1,24 @@
+{% extends "common/base.html" %}
+
+{% load static %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static "styles/accounts/search-parent.css" %}" class="css">
+{% endblock %}
+
+{% block title %}
+	Потърси родители
+{% endblock %}
+
+
+{% block content %}
+  <h1 class="section-heading">Потърси родители</h1>
+
+  {% include "accounts/search-form.html" %}
+
+  <section class="parent-user-section">
+    {% for parent in parents %}
+    	{% include "accounts/parent-card.html" %}
+    {% endfor %}
+  </section>
+{% endblock %}

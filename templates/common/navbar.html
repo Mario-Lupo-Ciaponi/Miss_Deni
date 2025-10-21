@@ -11,8 +11,8 @@
     <ul class="links">
       <li class="item"><a class="link" href="{% url "about" %}">Зa Miss Deni</a></li>
       <li class="item"><a class="link" href="{% url "news" %}">Новини</a></li>
+      <li class="item"><a class="link" href="{% url "posts" %}">Публикация</a></li>
       <li class="item"><a class="link" href="#">Галерия</a></li>
-      <li class="item"><a class="link" href="#">Видеа</a></li>
       <li class="item"><a class="link" href="{% url "contact" %}">Контакти</a></li>
       {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
@@ -20,7 +20,7 @@
             <a class="link" href="#">Учител</a>
             <ul class="dropdown">
               <li class="dropdown-item"><a href="{% url "add-post" %}" class="dropdown-link">Нова Публикация</a></li>
-              <li class="dropdown-item"><a href="" class="dropdown-link">Потърси родител</a></li>
+              <li class="dropdown-item"><a href="{% url "search-parents" %}" class="dropdown-link">Потърси родител</a></li>
             </ul>
           </li>
         {% else %}

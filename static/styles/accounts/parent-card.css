@@ -1,0 +1,68 @@
+:root {
+  --beige-color: #e1d8ca;
+  --dark-brown-color: #5A3E2B;;
+  --brown-color: #7c6f63;
+  --darker-brown-color: #4f433c;
+}
+
+.parent-card {
+  padding: 0.5rem;
+  border-radius: 2.5rem;
+  background-color: var(--beige-color);
+  width: 24%;
+
+}
+
+.parent-card .profile-image {
+  width: 100%;
+  height: 60%;
+  border-radius: 2rem;
+}
+
+.parent-card .content{
+  padding: 1.25rem 1.25rem 1rem;
+}
+
+
+.parent-card .content .username{
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--dark-brown-color);
+}
+
+.parent-card .content .info-and-open-link{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.parent-card .content .info-and-open-link .info{
+  display: flex;
+  gap: 1rem;
+  color: var(--dark-brown-color);
+}
+
+.parent-card .content .info-and-open-link .info .icon{
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--brown-color);
+}
+
+.parent-card .content .info-and-open-link .info .count{
+  font-weight: bold;
+}
+
+.parent-card .content .open-account-link{
+  padding: 0.75rem 1.3rem;
+  border-radius: 2rem;
+  border: 1px solid var(--dark-brown-color);
+  background-color: var(--dark-brown-color);
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+  color: white;
+}
+
+.parent-card .content .open-account-link:hover{
+  background-color: var(--brown-color);
+}
+

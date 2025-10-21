@@ -22,6 +22,19 @@ class NewsListView(ListView):
         return news
 
 
+class NormalPostListView(ListView):
+    model = Post
+    template_name = "posts/post-section.html"
+    extra_context = {
+        "title": "публикации",
+    }
+
+    def get_queryset(self):
+        posts = Post.objects.filter(type_of_post=PostTypeChoices.NORMAL_POST).order_by("-posted_on")
+
+        return posts
+
+
 
 class AddPostView(LoginRequiredMixin, IsSuperUserMixin, UserPassesTestMixin, CreateView):
     form_class = AddPostModelForm

@@ -12,7 +12,7 @@
 
 
 {% block content %}
-  <h1 class="posts-heading">Новини</h1>
+  <h1 class="posts-heading">{{ title|capfirst }}</h1>
   <section class="post-section">
     {% for post in post_list %}
       {% include "posts/post-card.html" %}

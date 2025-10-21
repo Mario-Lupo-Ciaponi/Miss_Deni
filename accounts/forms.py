@@ -1,5 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django import forms
+from django.core.validators import MinLengthValidator
 
 UserModel = get_user_model()
 
@@ -54,3 +56,17 @@ class CustomLoginForm(AuthenticationForm):
         self.fields["password"].widget.attrs.update({
             "placeholder": "Въведете парола"
         })
+
+
+class SearchForm(forms.Form):
+    query = forms.CharField(
+        label="",
+        max_length=150,
+        validators=[
+            MinLengthValidator(3),
+        ],
+        widget=forms.widgets.TextInput(attrs={
+            "placeholder": "Потърси...",
+        }),
+        required=False,
+    )
