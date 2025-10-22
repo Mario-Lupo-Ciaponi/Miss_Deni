@@ -9,15 +9,15 @@
     </button>
 
     <ul class="links">
-      <li class="item"><a class="link" href="{% url "about" %}">Зa Miss Deni</a></li>
-      <li class="item"><a class="link" href="{% url "news" %}">Новини</a></li>
-      <li class="item"><a class="link" href="{% url "posts" %}">Публикация</a></li>
-      <li class="item"><a class="link" href="#">Галерия</a></li>
-      <li class="item"><a class="link" href="{% url "contact" %}">Контакти</a></li>
+      <li class="item"><a class="link {% if current_page == "about_us" %}current{% endif %}" href="{% url "about" %}">Зa Miss Deni</a></li>
+      <li class="item"><a class="link {% if current_page == "news" %}current{% endif %}" href="{% url "news" %}">Новини</a></li>
+      <li class="item"><a class="link {% if current_page == "normal_post" %}current{% endif %}" href="{% url "posts" %}">Публикация</a></li>
+      <li class="item"><a class="link {% if current_page == "gallery" %}current{% endif %}" href="#">Галерия</a></li>
+      <li class="item"><a class="link {% if current_page == "contact" %}current{% endif %}" href="{% url "contact" %}">Контакти</a></li>
       {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
           <li class="item">
-            <a class="link" href="#">Учител</a>
+            <a class="link {% if current_page == "teacher" %}current{% endif %}" href="#">Учител</a>
             <ul class="dropdown">
               <li class="dropdown-item"><a href="{% url "add-post" %}" class="dropdown-link">Нова Публикация</a></li>
               <li class="dropdown-item"><a href="{% url "search-parents" %}" class="dropdown-link">Потърси родител</a></li>
@@ -35,6 +35,7 @@
         </li>
       {% else %}
         <li class="item"><a class="link" href="{% url "login" %}">Вход</a></li>
+        <li class="item"><a class="link" href="{% url "register" %}">Регистрирай</a></li>
       {% endif %}
     </ul>
   </div>

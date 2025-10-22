@@ -5,15 +5,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   padding: 3rem 0;
 }
 
-.section-heading {
-  margin: 1rem auto;
-  text-align: center;
-  font-size: 3.3rem;
-  color: #5A3E2B;
-  border-bottom: 1px solid #5A3E2B;
-  width: 75%;
+.parent-user-section .no-results-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
 }
+
+.parent-user-section .no-results-found .no-results-img{
+  width: 30%;
+}
+
+.parent-user-section .no-results-found .no-results-title{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+

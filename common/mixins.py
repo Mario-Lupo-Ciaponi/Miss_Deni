@@ -4,3 +4,4 @@ class MakeAllFieldsRequiredMixin:
 
         for field in self.fields:
             self.fields[field].required = True
+

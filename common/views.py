@@ -13,14 +13,16 @@ def index_view(request: HttpRequest) -> HTTPResponse:
 
 
 def about_view(request: HttpRequest) -> HTTPResponse:
-    return render(request, "common/about.html")
+    return render(request, "common/about.html", {"current_page": "about_us"})
 
 
 class ContactView(FormView):
     form_class = ContactForm
-
     template_name = "common/contact.html"
     success_url = reverse_lazy("contact")
+    extra_context = {
+        "current_page": "contact"
+    }
 
     def form_valid(self, form):
         print("yes")

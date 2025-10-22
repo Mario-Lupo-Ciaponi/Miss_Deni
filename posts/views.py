@@ -14,6 +14,7 @@ class NewsListView(ListView):
     template_name = "posts/post-section.html"
     extra_context = {
         "title": "новини",
+        "current_page": "news",
     }
 
     def get_queryset(self):
@@ -27,6 +28,7 @@ class NormalPostListView(ListView):
     template_name = "posts/post-section.html"
     extra_context = {
         "title": "публикации",
+        "current_page": "normal_post",
     }
 
     def get_queryset(self):
@@ -42,7 +44,8 @@ class AddPostView(LoginRequiredMixin, IsSuperUserMixin, UserPassesTestMixin, Cre
     template_name = "posts/post-form.html"
     success_url = reverse_lazy("index")
     extra_context = {
-        "title": "Създай Публикация"
+        "title": "Създай Публикация",
+        "current_page": "teacher",
     }
 
 

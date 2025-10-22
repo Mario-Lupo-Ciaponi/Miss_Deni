@@ -8,7 +8,6 @@ from django.views.generic import CreateView, ListView
 from .forms import UserRegistrationForm, CustomLoginForm, SearchForm
 
 
-
 UserModel = get_user_model()
 
 
@@ -28,7 +27,9 @@ class SearchParentView(ListView):
     form_class = SearchForm
     context_object_name = "parents"
     query_param = "query"
-
+    extra_context = {
+        "current_page": "teacher",
+    }
 
 
     def get_context_data(
