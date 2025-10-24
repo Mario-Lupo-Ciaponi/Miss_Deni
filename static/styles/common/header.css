@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
 
 .banner {
-  height: 540px;
+  height: 90vh;
   width: 100%;
   position: relative;
 }
@@ -40,6 +40,13 @@
   font-size: 1.7rem;
   text-align: center;
   margin-top: 5px;
+}
+
+.filter {
+  position: absolute;
+  background-color: black;
+  inset: 0;
+  opacity: 0.4;
 }
 
 @media screen and (max-width: 640px){
