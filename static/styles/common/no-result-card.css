@@ -1,0 +1,16 @@
+.no-results-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.no-results-found .no-results-img{
+  width: 30%;
+}
+
+.no-results-found .no-results-title{
+  font-size: 1.5rem;
+  font-weight: 600;
+}

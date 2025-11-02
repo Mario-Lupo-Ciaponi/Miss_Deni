@@ -56,17 +56,3 @@ class CustomLoginForm(AuthenticationForm):
         self.fields["password"].widget.attrs.update({
             "placeholder": "Въведете парола"
         })
-
-
-class SearchForm(forms.Form):
-    query = forms.CharField(
-        label="",
-        max_length=150,
-        validators=[
-            MinLengthValidator(3),
-        ],
-        widget=forms.widgets.TextInput(attrs={
-            "placeholder": "Потърси...",
-        }),
-        required=False,
-    )

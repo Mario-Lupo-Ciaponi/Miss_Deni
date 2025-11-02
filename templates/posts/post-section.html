@@ -12,9 +12,13 @@
 
 
 {% block content %}
+  {% include "accounts/../common/search-form.html" %}
+
   <section class="post-section">
     {% for post in post_list %}
       {% include "posts/post-card.html" %}
+    {% empty %}
+      {% include "common/no-results-card.html" %}
     {% endfor %}
   </section>
   

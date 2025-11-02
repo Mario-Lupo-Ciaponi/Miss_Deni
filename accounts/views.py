@@ -5,7 +5,8 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
 
-from .forms import UserRegistrationForm, CustomLoginForm, SearchForm
+from common.mixins import SearchFormMixin
+from .forms import UserRegistrationForm, CustomLoginForm
 
 
 UserModel = get_user_model()
@@ -21,27 +22,14 @@ class CustomLoginView(LoginView):
     authentication_form = CustomLoginForm
 
 
-class SearchParentView(ListView):
+class SearchParentView(SearchFormMixin, ListView):
     model = UserModel
     template_name = "accounts/search-parent.html"
-    form_class = SearchForm
     context_object_name = "parents"
-    query_param = "query"
     extra_context = {
         "current_page": "teacher",
     }
 
-
-    def get_context_data(
-        self, *, object_list=None, **kwargs
-    ):
-        kwargs.update(
-            {
-                "search_form": self.form_class(),
-                "query": self.request.GET.get(self.query_param, ""),
-            }
-        )
-        return super().get_context_data(object_list=object_list, **kwargs)
 
     def get_queryset(self):
         parents = UserModel.objects.filter(is_superuser=False)

@@ -12,18 +12,13 @@
 
 
 {% block content %}
-  {% include "accounts/search-form.html" %}
+  {% include "accounts/../common/search-form.html" %}
 
   <section class="parent-user-section">
     {% for parent in parents %}
     	{% include "accounts/parent-card.html" %}
     {% empty %}
-      <article class="no-results-found">
-        <img class="no-results-img" src="{% static "images/no-result-image.svg" %}" alt="никакъв резултат">
-
-        <h2 class="no-results-title">Не намерихме резултат за "{{ query }}"</h2>
-        <p class="no-results-subtitle">Опитайте да съкратите или преформулирате търсенето си</p>
-      </article>
+      {% include "common/no-results-card.html" %}
     {% endfor %}
 
   </section>

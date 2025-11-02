@@ -1,4 +1,6 @@
 @import "post-card.css";
+@import "../common/search-form.css";
+@import "../common/no-result-card.css";
 
 .posts-heading {
   margin: 1rem auto;

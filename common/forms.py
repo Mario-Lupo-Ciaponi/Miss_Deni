@@ -1,4 +1,6 @@
 from django import forms
+from django.core.validators import MinLengthValidator
+
 from .mixins import MakeAllFieldsRequiredMixin
 
 
@@ -47,4 +49,17 @@ class ContactForm(MakeAllFieldsRequiredMixin, forms.Form):
             }
         ),
         label="Съобщение",
+    )
+
+class SearchForm(forms.Form):
+    query = forms.CharField(
+        label="",
+        max_length=150,
+        validators=[
+            MinLengthValidator(3),
+        ],
+        widget=forms.widgets.TextInput(attrs={
+            "placeholder": "Потърси...",
+        }),
+        required=False,
     )
