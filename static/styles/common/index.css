@@ -50,3 +50,41 @@
 .about-overview .overview-content .about-us-link:hover{
   background-color: #ded3d3;
 }
+
+.approach-section {
+  padding: 3rem;
+}
+
+.approach-section .section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.approach-section .section-header .header-title {
+  font-size: 3rem;
+}
+
+.approach-section .columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.approach-section .columns .approach-column {
+  width: 30%;
+  text-align: center;
+}
+
+.approach-section .columns .approach-column .column-header {
+  margin-bottom: 0.6rem;
+}
+
+.approach-section .columns .approach-column .column-header .icon{
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+}
+
+.approach-section .columns .approach-column .column-header .approach-title{
+  font-size: 1.5rem;
+}
+

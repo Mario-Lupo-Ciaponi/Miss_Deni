@@ -36,7 +36,6 @@
 }
 
 .footer-content .links .links .item {
-  list-style-type: none;
   margin: calc(var(--margin-common-value) * 2) 0;
 }
 
@@ -44,7 +43,7 @@
 .footer-content .links-column .link {
   text-decoration: none;
   color: white;
-  transition: color 0.5s;
+  transition: color 0.5s ease-in-out;
   font-family: "Playpen Sans", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -67,7 +66,7 @@
 
 .footer-content .social-media-links .social-link .icon {
   color: white;
-  transition: color 0.5s;
+  transition: color 0.5s ease-in-out;
 }
 
 .footer-content .social-media-links .social-link .icon:hover {

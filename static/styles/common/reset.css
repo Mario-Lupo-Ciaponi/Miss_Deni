@@ -52,3 +52,13 @@ h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+/*
+  11. Remove padding and list style type from list
+*/
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
