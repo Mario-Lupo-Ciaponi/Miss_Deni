@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
 
 .banner {
-  margin-top: 0.9rem;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   position: relative;
 }

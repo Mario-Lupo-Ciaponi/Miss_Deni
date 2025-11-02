@@ -1,7 +1,7 @@
 @import "header.css";
 
-.about-overview {
-  padding: 3rem;
+.section {
+  padding: 5rem 3rem;
 }
 
 .about-overview .content {
@@ -51,10 +51,6 @@
   background-color: #ded3d3;
 }
 
-.approach-section {
-  padding: 3rem;
-}
-
 .approach-section .section-header {
   text-align: center;
   margin-bottom: 5rem;
@@ -86,5 +82,48 @@
 
 .approach-section .columns .approach-column .column-header .approach-title{
   font-size: 1.5rem;
+}
+
+.connect-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.connect-section .connect-header  {
+  width: 47%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.connect-section .connect-header .connect-title{
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.connect-section .connect-header .connect-description{
+  font-size: 1.5rem;
+  line-height: 160%;
+}
+
+.connect-section .connect-links {
+  display: flex;
+  justify-content: center;
+  gap: 2.75rem;
+}
+
+.connect-section .connect-links .item {
+  font-size: 1.1rem;
+}
+
+.connect-section .connect-links .item .link{
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.connect-section .connect-links .item .link:hover{
+  color: #d7a585;
 }
 

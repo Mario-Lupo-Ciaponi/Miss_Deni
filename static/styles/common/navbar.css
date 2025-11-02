@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
 
 .navbar {
-  position: fixed;
+  position: sticky;
   width: 100%;
   left: 0;
   top: 0;
   z-index: 1000;
   background-color: chocolate;
-  margin-bottom: 3rem;
 }
 
 .navbar .content {

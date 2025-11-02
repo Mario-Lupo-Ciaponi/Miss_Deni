@@ -22,7 +22,7 @@
 {% endblock %}
 
 {% block content %}
-  <section class="about-overview">
+  <section class="about-overview section">
     <div class="content">
       <img src="{% static "images/about-overview-image.jpg" %}" alt="снимка на Miss Deni" class="overview-image">
       <div class="overview-content">
@@ -37,7 +37,7 @@
     </div>
   </section>
 
-  <section class="approach-section">
+  <section class="approach-section section">
     <header class="section-header">
       <h2 class="header-title">Вярвам, че ученето е приключение!</h2>
     </header>
@@ -76,5 +76,35 @@
         </p>
       </article>
     </div>
+  </section>
+
+  <section class="connect-section section">
+    <header class="connect-header">
+      <h2 class="connect-title">Контакти</h2>
+      <p class="connect-description">
+        Последвайте ме за повече информация или за да се свържете с мен
+      </p>
+    </header>
+
+    <ul class="connect-links">
+      <li class="item">
+        <a class="link" target="_blank" href="{% url "contact" %}">
+          <i class="fas fa-link icon"></i>
+          <span class="link-name">Свържете се с мен</span>
+        </a>
+      </li>
+      <li class="item">
+        <a class="link" target="_blank" href="https://www.instagram.com/ms.stefd/">
+          <i class="fab fa-instagram icon"></i>
+          <span class="link-name">Instagram</span>
+        </a>
+      </li>
+      <li class="item">
+        <a class="link" target="_blank" href="https://www.facebook.com/profile.php?id=100085079975834&locale=it_IT">
+          <i class="fab fa-facebook-square icon"></i>
+          <span class="link-name">Facebook</span>
+        </a>
+      </li>
+    </ul>
   </section>
 {% endblock %}
