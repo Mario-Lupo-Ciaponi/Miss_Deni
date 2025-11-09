@@ -22,3 +22,10 @@ class SearchFormMixin:
             }
         )
         return super().get_context_data(object_list=object_list, **kwargs)
+
+
+class IsSuperUserMixin:
+    def test_func(self) -> bool:
+        return (
+            self.request.user.is_superuser
+        )

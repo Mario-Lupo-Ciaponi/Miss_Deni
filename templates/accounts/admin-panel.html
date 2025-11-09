@@ -1,0 +1,78 @@
+{% extends "common/base.html" %}
+
+{% load static %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static "styles/accounts/admin-panel.css" %}" class="css">
+{% endblock %}
+
+{% block title %}
+	Учителски панел
+{% endblock %}
+
+
+{% block content %}
+  <section class="dashboard section">
+    <header class="header">
+      <h1 class="title">Табло за управление</h1>
+    </header>
+
+    <div class="total-container">
+      <article class="total-article">
+        <div class="content">
+          <h2 class="article-title">Общо ученици</h2>
+          <p class="info">{{ children.count }}</p>
+        </div>
+
+        <i class="fas fa-child icon"></i>
+      </article>
+
+      <article class="total-article">
+        <div class="content">
+          <h2 class="article-title">Часове днес</h2>
+          <p class="info">3</p>
+        </div>
+
+       <i class="far fa-clock icon"></i>
+      </article>
+
+      <article class="total-article">
+        <div class="content">
+          <h2 class="article-title">Пари този месеца</h2>
+          <p class="info">1000000</p>
+        </div>
+
+        <i class="fas fa-euro-sign icon"></i>
+      </article>
+    </div>
+  </section>
+
+  <section class="group section">
+    <header class="header">
+      <h1 class="title">Групи</h1>
+    </header>
+
+    <table class="groups-table">
+      <thead>
+        <tr>
+          <th scope="col">Номер</th>
+          <th scope="col">Име</th>
+          <th scope="col">Деца общо</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for group in groups %}
+        	<tr>
+            <th scope="row">{{ group.pk }}</th>
+            <td>{{ group.name }}</td>
+            <td>{{ group.students.count }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="add-group-div">
+      <a href="#" class="add-group"><span class="text">Добави група</span><i class="fas fa-plus"></i></a>
+    </div>
+  </section>
+{% endblock %}

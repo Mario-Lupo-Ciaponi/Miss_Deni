@@ -1,0 +1,88 @@
+.section {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header .title {
+  font-size: 2rem;
+}
+
+.dashboard .total-container {
+  display: flex;
+  gap: 3rem;
+}
+
+.dashboard .total-container .total-article {
+  padding: 1rem;
+  border-radius: 0.6rem;
+  background-color: #E0D8C9;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.dashboard .total-container .total-article .content {
+  width: 80%;
+}
+
+.dashboard .total-container .total-article .content .article-title{
+  font-size: 1rem;
+}
+
+.dashboard .total-container .total-article .content .info{
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.dashboard .total-container .total-article .icon{
+  font-size: 3.5rem;
+}
+
+.group .groups-table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.group .groups-table thead {
+  background-color: #E0D8C9;
+}
+
+.group .groups-table thead th{
+  padding: 0.7rem 3rem;
+}
+
+.group .groups-table tbody {
+  background-color: #F0ECE3;
+}
+
+.group .groups-table tbody th,
+.group .groups-table tbody td{
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #8F7E66;
+}
+
+.group .add-group-div {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 3rem;
+}
+
+.group .add-group-div .add-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 1rem;
+  border: 2px solid #3B2A1A;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.group .add-group-div .add-group:hover {
+  color: #FAF5EC;
+  background-color: #3B2A1A;
+}

@@ -8,7 +8,8 @@ from common.mixins import SearchFormMixin
 from .models import Post
 from .choices import PostTypeChoices
 from .forms import AddPostModelForm, EditPostModelForm
-from .mixins import IsSuperUserMixin, PostFormMixin
+from .mixins import  PostFormMixin
+from common.mixins import IsSuperUserMixin
 
 
 class NewsListView(SearchFormMixin, ListView):

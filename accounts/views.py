@@ -1,12 +1,17 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.views import LoginView
 from django.db.models import Q
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, TemplateView
 
 from common.mixins import SearchFormMixin
 from .forms import UserRegistrationForm, CustomLoginForm
+
+from common.mixins import IsSuperUserMixin
+
+from students.models import Student, Group
 
 
 UserModel = get_user_model()
@@ -41,3 +46,16 @@ class SearchParentView(SearchFormMixin, ListView):
         parents = parents.filter(search_query)
 
         return parents
+
+
+class AdminPanelView(LoginRequiredMixin, IsSuperUserMixin, UserPassesTestMixin, TemplateView):
+    template_name = "accounts/admin-panel.html"
+    
+    def get_context_data(self, **kwargs):
+        kwargs.update({
+            "children": Student.objects.all(),
+            "groups": Group.objects.all(),
+        })
+        
+        return super().get_context_data(**kwargs)
+

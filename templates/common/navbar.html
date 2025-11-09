@@ -19,6 +19,7 @@
           <li class="item">
             <a class="link {% if current_page == "teacher" %}current{% endif %}" href="#">Учител</a>
             <ul class="dropdown">
+              <li class="dropdown-item"><a href="{% url "admin-panel" %}" class="dropdown-link">Учителски панел</a></li>
               <li class="dropdown-item"><a href="{% url "add-post" %}" class="dropdown-link">Нова Публикация</a></li>
               <li class="dropdown-item"><a href="{% url "search-parents" %}" class="dropdown-link">Потърси родител</a></li>
             </ul>

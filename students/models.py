@@ -9,10 +9,16 @@ class Student(models.Model):
     last_name = models.CharField(
         max_length=150,
     )
+    age = models.PositiveIntegerField()
     parent = models.ForeignKey(
         to=MissDeniUser,
         related_name="children",
         on_delete=models.CASCADE,
+    )
+    group = models.ForeignKey(
+        to="Group",
+        related_name="students",
+        on_delete=models.DO_NOTHING,
     )
 
     def __str__(self):
@@ -32,3 +38,13 @@ class Visit(models.Model):
 
     def __str__(self):
         return f"Присъствал {self.student} на {self.date.strftime('%Y-%m-%d %H:%M')}"
+
+
+class Group(models.Model):
+    name = models.CharField(
+        max_length=50,
+        unique=True,
+    )
+
+    def __str__(self):
+        return f"Група - {self.name}"

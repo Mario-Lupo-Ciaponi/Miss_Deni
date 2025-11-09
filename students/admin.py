@@ -1,3 +1,12 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Student, Visit, Group
+
+
+@admin.register(Student)
+class StudentAdmin(admin.ModelAdmin):
+    ...
+
+@admin.register(Group)
+class GroupAdmin(admin.ModelAdmin):
+    ...
