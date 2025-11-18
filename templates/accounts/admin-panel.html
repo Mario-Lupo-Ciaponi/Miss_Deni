@@ -21,7 +21,7 @@
       <article class="total-article">
         <div class="content">
           <h2 class="article-title">Общо ученици</h2>
-          <p class="info">{{ children.count }}</p>
+          <p class="info">{{ students.count }}</p>
         </div>
 
         <i class="fas fa-child icon"></i>
@@ -52,7 +52,7 @@
       <h1 class="title">Групи</h1>
     </header>
 
-    <table class="groups-table">
+    <table class="table">
       <thead>
         <tr>
           <th scope="col">Номер</th>
@@ -72,7 +72,36 @@
     </table>
 
     <div class="add-group-div">
-      <a href="#" class="add-group"><span class="text">Добави група</span><i class="fas fa-plus"></i></a>
+      <a href="{% url "create-group" %}" class="add-group"><span class="text">Добави група</span><i class="fas fa-plus"></i></a>
     </div>
+  </section>
+
+  <section class="students section">
+    <header class="header">
+      <h1 class="title">Ученици</h1>
+    </header>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Име</th>
+          <th scope="col">Присъствия</th>
+          <th scope="col">Отсъствия</th>
+          <th scope="col">%</th>
+          <th scope="col">Дължима сума</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+        	<tr>
+            <th scope="row">{{ student }}</th>
+            <td class="green-cell">60</td>
+            <td class="red-cell">0</td>
+            <td>100</td>
+            <td>259</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </section>
 {% endblock %}

@@ -53,7 +53,7 @@ class AdminPanelView(LoginRequiredMixin, IsSuperUserMixin, UserPassesTestMixin, 
     
     def get_context_data(self, **kwargs):
         kwargs.update({
-            "children": Student.objects.all(),
+            "students": Student.objects.all(),
             "groups": Group.objects.all(),
         })
         

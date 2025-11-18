@@ -42,28 +42,37 @@
   font-size: 3.5rem;
 }
 
-.group .groups-table {
+.table {
   border-collapse: collapse;
   text-align: center;
 }
 
-.group .groups-table thead {
+.table thead {
   background-color: #E0D8C9;
 }
 
-.group .groups-table thead th{
+.table thead th{
   padding: 0.7rem 3rem;
 }
 
-.group .groups-table tbody {
+.table tbody {
   background-color: #F0ECE3;
 }
 
-.group .groups-table tbody th,
-.group .groups-table tbody td{
+.table tbody th,
+.table tbody td{
   padding: 1rem 2rem;
   border-bottom: 1px solid #8F7E66;
 }
+
+.table tbody td.green-cell{
+  background-color: #8EBE7E;
+}
+
+.table tbody td.red-cell{
+  background-color: #D47A7A;
+}
+
 
 .group .add-group-div {
   display: flex;

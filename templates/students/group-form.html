@@ -1,0 +1,20 @@
+{% extends "common/base.html" %}
+
+{% load static %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static "styles/students/group-form.css" %}" class="css">
+{% endblock %}
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+
+{% block content %}
+  <form method="post" class="group-form">
+    {% csrf_token %}
+    {{ form }}
+    <button class="submit">{{ submit_button_text }}</button>
+  </form>
+{% endblock %}

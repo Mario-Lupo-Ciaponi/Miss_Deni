@@ -19,6 +19,8 @@ class Student(models.Model):
         to="Group",
         related_name="students",
         on_delete=models.DO_NOTHING,
+        null=True,
+        blank=True,
     )
 
     def __str__(self):

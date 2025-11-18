@@ -25,6 +25,7 @@ urlpatterns = [
     path("", include("common.urls")),
     path("posts/", include("posts.urls")),
     path("accounts/", include("accounts.urls")),
+    path("students/", include("students.urls")),
 ]
 
 if settings.DEBUG:

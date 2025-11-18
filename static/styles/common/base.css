@@ -8,3 +8,32 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #3B2A1A;
 }
+
+button#go-back-to-top-btn {
+  position: fixed;
+  top: 85%;
+  right: 3%;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #3B2A1A;
+  border: 1px solid #3B2A1A;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(25px);
+  transition: all 0.4s ease-in-out;
+}
+
+button#go-back-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+button#go-back-to-top-btn:hover {
+  background-color: white;
+  color: #3B2A1A;
+}

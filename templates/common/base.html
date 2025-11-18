@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="{% static 'styles/common/reset.css' %}">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
   <link rel="shortcut icon" href="{% static "images/logo/logo.png" %}" type="image/x-icon">
+  <script src="{% static "js/go-back-to-top.js" %}" defer></script>
+  <script src="{% static "js/toggle-class-on-scroll.js" %}" defer></script>
   {% block styles %}{% endblock %}
   <title>{% block title %}{% endblock %}</title>
 </head>
@@ -30,5 +32,8 @@
     {% endblock %}
   </main>
   {% include "common/footer.html" %}
+  <button id="go-back-to-top-btn" onclick="goBackToTop()">
+    <i class="fas fa-arrow-up icon"></i>
+  </button>
 </body>
 </html>
